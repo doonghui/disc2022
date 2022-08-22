@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>키워드로 장소검색하고 목록으로 표출하기</title>
+    <link rel="stylesheet" href="style2.css">
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=db8b2358629d0f1e73331408000d8bfd&libraries=services"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=db8b2358629d0f1e73331408000d8bfd"></script>
 </head>
 
 <body>
@@ -14,56 +18,46 @@
     <div id="container">
         <header>
             <div id="logo">
-                <a href="index.html">
+                <a href="index2.html">
                     <h1>Enjoy your Life</h1>
                 </a>
             </div>
-            <nav>
-                <ul id="topMenu">
-                    <li><a href="#">#뮤지컬</a></li>
-                    <li><a href="#">#전시회</a></li>
-                    <li><a href="#">#콘서트</a></li>
 
-                </ul>
-
-            </nav>
+            <div id="title"><h1>WHERE WE GO</h1></div>
 
         </header>
 
         <div id="slideShow">
             <div id="side-menu">
-                <input type="checkbox" class=" " id="collapsible">
-                <label for="collapsible"><span>메뉴</span></label>
-                <!-- <ul id ="menuitems" class="menuitems">
-                    <li><a href="#">first</a></li>
-                    <li><a href="#">second</a></li>
-                    <li><a href="#">third</a></li>
-    
-    
-                </ul> -->
-                <div class="sidebar">
+               
+            
+              
+                    <div class="tab_menu">
+                        <div id="tab_list">
+                            <div class="tab-cata"><a href="index3.html" class="tab-btn">전시</a></div>
+                            <div class="tab-cata"><a href="index3.html" class="tab-btn">뮤지컬</a></div>
+                            <div class="tab-cata"><a href="index3.html" class="tab-btn">콘서트</a></div>
+                            <div class="tab-cata"><a href="index3.html" class="tab-btn">축제</a></div>
+
+                   </div>
+             
+                    
 
                 </div>
 
 
             </div>
-            <div id="map">
-                지도가 올 위치입니다.
-                <!-- <img src="./img/seoul.png"> -->
-            </div>
+       
         </div>
 
-        <footer>
-
-
-        </footer>
 
 
     </div>
 
 
 
-    <script src="main.js"></script>
+    <script src="main3.js"></script>
+
 
 </body>
 
