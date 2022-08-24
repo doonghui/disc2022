@@ -16,7 +16,7 @@ ul {
 
 
 body {
-    background-image: url('./img/background_img.jpg');
+    background-color: #f8f7f8;
 }
 
 #container {
@@ -29,7 +29,8 @@ body {
 
 header {
     width: 100%;
-    height: 500px;
+    height: 80px;
+    background-color: #bbd8db;
 }
 
 
@@ -44,43 +45,57 @@ header {
 #logo h1 {
     font-family: 'Oleo Script Swash Caps', cursive;;
     font-weight: 300;
-    font-size:30px;
-    color:brown;
-    text-shadow: 0 -1px wheat;
+    font-size:35px;
+    color:#fcfbfc;
+    text-shadow: 0 -3px #bbb;
 
 }
 
-/* 제목 영역 */
 
-#title h1 {
-    text-align: center ;
-    font-family: 'Aboreto', cursive;
-    color : red;
-    font-size: 150px;
-    line-height: 500px;
-    font-weight: bold;
-    letter-spacing: 0em;
+/* 글자 우측 커서 효과 삽입 */
+.wrapper {
+    height: 250px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    color: rgb(84, 83, 83);
+    width: 30ch;
+    animation: typing 6s steps(40) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black;
+    font-family: monospace;
+    font-size: 4em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+
+/* 이미지 슬라이드 쇼 영역 */
+#slideShow {
+    clear: both;        /* 플로팅 해제 */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 
 
-
-#topMenu >li > a {
-    display:block;
-    font-weight:600;
-    font-size:30px;
-    color: purple;
-    text-shadow: 0 1px black;
-    padding: 5px 60px;
-}
-
-#topMenu > li > a:hover {
-    color:rgb(200, 46, 46);
-    text-shadow: 0 -1px black;
-}
-
+/* 박스 영역 */
 #tab_list {
-    margin-top: 10px; 
+    margin-top: 210px; 
     margin-bottom: 10px; 
     text-align: center;
 
@@ -88,100 +103,62 @@ header {
 
 .tab-cata  {
 
+     color: rgb(84, 83, 83);
      display:inline-block;
-    padding:80px; 
-    margin:30px;
-    background: green ;
+     border-radius: 10px;
+     padding:20px 20px; 
+    margin:20px 30px;
+    background: #bbd8db ;
     font-size:30px;
+    transition: all 0.3s cubic-bezier(0.42,0.0,0.58,1.0);
 
 }
 
 
+.tab-cata > div {
+    color: rgb(84, 83, 83);
+    background: #fcfbfc ;
+    border-radius: 10px;     
+    padding:100px 60px; 
 
-/* #side-menu .menuitems {
-    width:200px;
-    list-style: none;
-    display:none;
-    background-color: goldenrod;
-}
-#side-menu .menuitems li{
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
-}
-#side-menu .menuitems li > a{
-  text-decoration: none;
-}
-
-#side-menu input[type=checkbox]:checked~.menuitems {
-    display:block;
-} */
-
-
-/* 이미지 슬라이드 쇼 영역 */
-#slideShow {
-    clear: both;        /* 플로팅 해제 */
-    width: 100%;
-    height: 300px;
-    /* background-color: aqua; */
-    overflow: hidden;
-}
-
-
-
-
-
-
-
-
-/* 지도 */
-
-#map {
-    width: 65%; 
-    height: 600px;
-    margin-top: 30px;
-    margin-left:auto;
-    margin-right:30px;
-    background-color: #ccc;
-}
+    cursor: pointer;
+    font-size:30px;
+    transition: all 0.2s ease-in-out;
+    }
+    .tab-cata:hover {
+    animation: swing 1s ease;
+    animation-iteration-count: 1;
+    }
+    @keyframes swing {
+    15% {
+    transform: translateX(5px);
+    }
+    30% {
+    transform: translateX(-5px);
+    }
+    50% {
+    transform: translateX(3px);
+    }
+    65% {
+    transform: translateX(-3px);
+    }
+    80% {
+    transform: translateX(2px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+    }
 
 
 
-/* .slideShow, .slideShow * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
-.slideShow a, .slideShow a:hover, .slideShow a:active{color:#000;text-decoration: none;}
-.slideShow {position:relative;width:100%;height:500px;}
-#sidebar {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
-.bg_white {background:#fff;}
-#sidebar hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
-#sidebar .option{text-align: center;}
-#sidebar .option p {margin:10px 0;}  
-#sidebar .option button {margin-left:5px;}
-#placesList li {list-style: none;}
-#placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
-#placesList .item span {display: block;margin-top:4px;}
-#placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
-#placesList .item .info{padding:10px 0 10px 55px;}
-#placesList .info .gray {color:#8a8a8a;}
-#placesList .info .jibun {padding-left:26px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
-#placesList .info .tel {color:#009900;}
-#placesList .item .markerbg {float:left;position:absolute;width:36px; height:37px;margin:10px 0 0 10px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;}
-#placesList .item .marker_1 {background-position: 0 -10px;}
-#placesList .item .marker_2 {background-position: 0 -56px;}
-#placesList .item .marker_3 {background-position: 0 -102px}
-#placesList .item .marker_4 {background-position: 0 -148px;}
-#placesList .item .marker_5 {background-position: 0 -194px;}
-#placesList .item .marker_6 {background-position: 0 -240px;}
-#placesList .item .marker_7 {background-position: 0 -286px;}
-#placesList .item .marker_8 {background-position: 0 -332px;}
-#placesList .item .marker_9 {background-position: 0 -378px;}
-#placesList .item .marker_10 {background-position: 0 -423px;}
-#placesList .item .marker_11 {background-position: 0 -470px;}
-#placesList .item .marker_12 {background-position: 0 -516px;}
-#placesList .item .marker_13 {background-position: 0 -562px;}
-#placesList .item .marker_14 {background-position: 0 -608px;}
-#placesList .item .marker_15 {background-position: 0 -654px;}
-#pagination {margin:10px auto;text-align: center;}
-#pagination a {display:inline-block;margin-right:10px;}
-#pagination .on {font-weight: bold; cursor: default;color:#777;} */
+
+
+
+
+
+
+
 
 
 
