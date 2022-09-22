@@ -4,7 +4,7 @@ data = decodeURI(receivedData);
 
 // 데이터 받아서 최초 목록 표시
 Data(
-  `http://openapi.seoul.go.kr:8088/6e716276736c6f7538335658626c64/json/culturalEventInfo/1/999/${data}/`
+  `http://openapi.seoul.go.kr:8088/6b757877706c6f753731426449436f/json/culturalEventInfo/1/999/${data}/`
 );
 
 // 카테고리 버튼 선택 하기
@@ -17,9 +17,8 @@ list_btn.addEventListener("click", function (e) {
     if (tab_radio[i].checked) {
       menuList.innerHTML = "";
       searchInput.value = "";
-      console.log(`${tab_radio[i].value}`);
       Data(
-        `http://openapi.seoul.go.kr:8088/6e716276736c6f7538335658626c64/json/culturalEventInfo/1/999/${tab_radio[i].value}/`
+        `http://openapi.seoul.go.kr:8088/6b757877706c6f753731426449436f/json/culturalEventInfo/1/999/${tab_radio[i].value}/`
       );
     }
   }
@@ -179,7 +178,7 @@ function DateMake() {
   let now =
     today.getFullYear() +
     "-" +
-    (today.getMonth() + 1 < 9
+    (today.getMonth() + 1 <= 9
       ? "0" + (today.getMonth() + 1)
       : today.getMonth() + 1) +
     "-" +
@@ -188,8 +187,3 @@ function DateMake() {
 }
 
 
-
-// 내일 해야할 일.
-// 두번 클릭해야 바뀌는거 수정하기
-// 필요없는 코드 삭제하기
-// github에 외부 api 로 올려보고 에러확인해서 교수님께 이메일 보내기
