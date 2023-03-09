@@ -4,7 +4,7 @@ data = decodeURI(receivedData);
 
 // 데이터 받아서 최초 목록 표시
 Data(
-  `http://openapi.seoul.go.kr:8088/6b757877706c6f753731426449436f/json/culturalEventInfo/1/999/${data}/`
+  `http://openapi.seoul.go.kr:8088/키넣기/json/culturalEventInfo/1/999/${data}/`
 );
 
 // 카테고리 버튼 선택 하기
@@ -18,7 +18,7 @@ list_btn.addEventListener("click", function (e) {
       menuList.innerHTML = "";
       searchInput.value = "";
       Data(
-        `http://openapi.seoul.go.kr:8088/6b757877706c6f753731426449436f/json/culturalEventInfo/1/999/${tab_radio[i].value}/`
+        `http://openapi.seoul.go.kr:8088/키넣기/json/culturalEventInfo/1/999/${tab_radio[i].value}/`
       );
     }
   }
